@@ -1,4 +1,4 @@
-package com.xiaozi5.WebBoot.home.service;
+package com.xiaozi5.webboot.home.service;
 
 import org.springframework.stereotype.Service;
 

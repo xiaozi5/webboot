@@ -1,4 +1,4 @@
-package com.xiaozi5.WebBoot;
+package com.xiaozi5.webboot;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

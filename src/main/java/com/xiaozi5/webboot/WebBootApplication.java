@@ -1,4 +1,4 @@
-package com.xiaozi5.WebBoot;
+package com.xiaozi5.webboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -1,4 +1,4 @@
-package com.xiaozi5.WebBoot.interceptors;
+package com.xiaozi5.webboot.interceptors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,7 +32,9 @@ public class UseTimeInter implements HandlerInterceptor {
 			throws Exception {
 		Long endTime=System.currentTimeMillis();
 		Long startTime = threadLocalTime.get();
+		threadLocalTime.remove();
 		log.info("请求时间:"+(endTime-startTime)+"ms");
+		
 	}
 	
 	

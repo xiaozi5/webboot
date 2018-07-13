@@ -1,4 +1,4 @@
-package com.xiaozi5.WebBoot.home.controller;
+package com.xiaozi5.webboot.home.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSONObject;
-import com.xiaozi5.WebBoot.home.service.HomeService;
+import com.xiaozi5.webboot.home.service.HomeService;
 
 @RestController
 @RequestMapping("/home/")

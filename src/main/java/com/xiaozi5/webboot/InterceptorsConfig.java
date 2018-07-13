@@ -1,4 +1,4 @@
-package com.xiaozi5.WebBoot;
+package com.xiaozi5.webboot;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,19 +11,32 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.xiaozi5.WebBoot.interceptors.UseTimeInter;
+import com.xiaozi5.webboot.interceptors.UseTimeInter;
 
 
+
+
+/**
+ * @author xiaozi5
+ *webmvc配置
+ *
+ *
+ */
 @Configuration
 @EnableWebMvc
 public class InterceptorsConfig implements WebMvcConfigurer {
 
+	/**
+	 * 过滤器设置
+	 */
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new UseTimeInter()).excludePathPatterns("/**/*.html");
 		
 	}
-	
+	/**
+	 * 放行静态资源
+	 */
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
