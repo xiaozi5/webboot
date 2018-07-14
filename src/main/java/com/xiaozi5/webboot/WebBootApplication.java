@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @SpringBootApplication
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
-@Import({WebBootConfig.class,InterceptorsConfig.class})
+@Import({WebBootConfig.class,MVCConfig.class})
 @EnableAutoConfiguration
 public class WebBootApplication {
 

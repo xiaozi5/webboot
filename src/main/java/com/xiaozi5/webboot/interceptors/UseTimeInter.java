@@ -20,7 +20,6 @@ public class UseTimeInter implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		HandlerMethod handlerMethod=(HandlerMethod) handler;
 		Long startTime = System.currentTimeMillis();
 		threadLocalTime.set(startTime);
 		return true;
