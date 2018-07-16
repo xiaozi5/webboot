@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSONObject;
+import com.xiaozi5.WebBoot.anno.NeedLogin;
 import com.xiaozi5.WebBoot.home.service.HomeService;
 
 @RestController
@@ -20,10 +21,12 @@ public class HomeCtl {
 	@Autowired
 	private HomeService homeService;
 	
+	@NeedLogin
 	@RequestMapping("/personinfo/{userid}")
 	public JSONObject personInfo(@PathVariable String userid) {
-		
-		return null;
+		JSONObject result = new JSONObject();
+		result.put("ctl", userid);
+		return result;
 	}
 
 }

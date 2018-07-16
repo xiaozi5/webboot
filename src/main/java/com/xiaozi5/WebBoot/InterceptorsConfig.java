@@ -11,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import com.xiaozi5.WebBoot.interceptors.LoginInter;
 import com.xiaozi5.WebBoot.interceptors.UseTimeInter;
 
 
@@ -21,6 +22,7 @@ public class InterceptorsConfig implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new UseTimeInter()).excludePathPatterns("/**/*.html");
+		registry.addInterceptor(new LoginInter()).excludePathPatterns("/**/*.html");
 		
 	}
 	
