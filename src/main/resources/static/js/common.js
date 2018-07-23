@@ -1,28 +1,12 @@
-//导航选择器
-var url = window.location.href;
-if (url.indexOf("newsCategoryManage") > 0
-		|| url.indexOf("newsCategoryEdit") > 0) {
-	$("#news").addClass("active");
-	$("#newsCategoryManage").addClass("active");
-} else if (url.indexOf("newsManage") > 0 || url.indexOf("newsEdit") > 0) {
-	$("#news").addClass("active");
-	$("#newsManage").addClass("active");
-}
-
-// 提示条配置
-toastr.options = {
-	"closeButton" : true,
-	"debug" : false,
-	"progressBar" : true,
-	"preventDuplicates" : false,
-	"positionClass" : "toast-top-right",
-	"onclick" : null,
-	"showDuration" : "400",
-	"hideDuration" : "1000",
-	"timeOut" : "7000",
-	"extendedTimeOut" : "1000",
-	"showEasing" : "swing",
-	"hideEasing" : "linear",
-	"showMethod" : "fadeIn",
-	"hideMethod" : "fadeOut"
-}
+function getRootPath(){
+		//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp
+		var curWwwPath=window.document.location.href;
+		//获取主机地址之后的目录，如： /uimcardprj/share/meun.jsp
+		var pathName=window.document.location.pathname;
+		var pos=curWwwPath.indexOf(pathName);
+		//获取主机地址，如： http://localhost:8083
+		var localhostPaht=curWwwPath.substring(0,pos);
+		//获取带"/"的项目名，如：/uimcardprj
+//		var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+		return(localhostPaht);
+	}
