@@ -1,7 +1,5 @@
 package com.xiaozi5.webboot.interceptors;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -10,6 +8,7 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import com.xiaozi5.webboot.anno.NeedLogin;
+
 
 public class LoginInter implements HandlerInterceptor {
 
